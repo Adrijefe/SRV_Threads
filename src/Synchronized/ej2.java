@@ -3,7 +3,10 @@ package Synchronized;
 import java.util.concurrent.Executors;
 
 public class ej2 {
+    static Object o1 = new Object();
+    static Object o2 = new Object();
     public static void main(String[] args) {
+
 
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             executor.submit(ej2::rojoynegro);
