@@ -1,3 +1,6 @@
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Ej1 {
     public static void main(String[] args) throws InterruptedException {
         var mithread = Thread.startVirtualThread(()->{
@@ -16,4 +19,5 @@ public class Ej1 {
 
 
         }
-    }
+
+}

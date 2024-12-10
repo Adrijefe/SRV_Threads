@@ -8,8 +8,8 @@ import java.util.concurrent.Executors;
 
 public class Ej2 {
         public static void main(String[] args) throws InterruptedException, ExecutionException {
-            try (var executor = Executors.newVirtualThreadPerTaskExecutor()){
-                var weather = executor.submit(() ->  fetch("https://apipa.vercel.app/api/w/weather"));
+                try (var executor = Executors.newVirtualThreadPerTaskExecutor()){
+                    var weather = executor.submit(() ->  fetch("https://apipa.vercel.app/api/w/weather"));
 
                 var temperature = executor.submit(() -> fetch("https://apipa.vercel.app/api/w/temperature"));
 

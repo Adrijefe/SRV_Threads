@@ -17,10 +17,12 @@ public class ej1 {
         }
 
         void copiarPaginas(Libro libroOrigen) {
+            libroOrigen.lock.lock();
             for (String pagina : libroOrigen.obtenerPaginasInterioresNoVacias()) {
                 int penultimaPosicion = Math.max(0, this.paginas.size() - 1);
                 this.paginas.add(penultimaPosicion, pagina);
             }
+            libroOrigen.lock.unlock();
         }
 
         List<String> obtenerPaginasInterioresNoVacias() {
